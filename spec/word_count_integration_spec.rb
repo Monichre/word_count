@@ -10,9 +10,6 @@ describe('the index path', {:type => :feature}) do
     fill_in('user_input_word', :with => 'The')
     click_button('Send')
     expect(page).to have_content('1')
-  end
-  it('returns to home page when link is clicked') do
-    visit('/word_count')
     click_link('#home')
     expect(page).to have_content('The future of word parsing is here. Enter your document, and your search term parameters')
   end
